@@ -1,0 +1,199 @@
+﻿.mt-1 {
+    margin-top: -1px;
+}
+
+.mt-2 {
+    margin-top: -2px;
+}
+
+.mt-3 {
+    margin-top: -3px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt25 {
+    margin-top: 25px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt95 {
+    margin-top: 95px;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+.mr25 {
+    margin-right: 25px;
+}
+.mr35 {
+    margin-right: 35px;
+}
+.mr40 {
+    margin-right: 40px;
+}
+.mr60 {
+    margin-right: 60px;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb2 {
+    margin-bottom: 2px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+.mb25 {
+    margin-bottom: 25px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+.mb35 {
+    margin-bottom: 35px;
+}
+.mb65 {
+    margin-bottom: 65px;
+}
+.mb95 {
+    margin-bottom: 95px;
+}
+.ml5 {
+    margin-left: 5px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+.pt15 {
+    padding-top: 15px;
+}
+.pt20 {
+    padding-top: 20px;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pl5 {
+    padding-left: 5px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+/*颜色定义*/
+.color-ff {
+    color: #ffffff;
+}
+.color-tl { /*tex;t-color-light*/
+    color: #82888a;
+}
+.color-tb { /*tex;t-color-base*/
+    color: #565a5c;
+}
+.color-d1 { /*danger*/
+    color: #ed5565;
+}
+.color-p1 { /*primary*/
+    color: #26a7c7;
+}
+.color-s1 { /*success*/
+    color: #76a549;
+}
+
+.color-gold {
+    color: #c19305;
+}
+
+.color-bd1 {
+    color: #dce0e0;
+}
+
+.fw {
+    font-weight: 700;
+}
+
+.max-w150 {
+    max-width: 150px;
+}

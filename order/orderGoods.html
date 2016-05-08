@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html><head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="description" content="Wallwa 墙蛙 - 墙上艺术的专家。">
+    <meta name="keywords" content="墙蛙,定制画,装饰画,墙上艺术,钉子">
+    <title>墙蛙 - 定制</title>
+    <link rel="stylesheet" href="build/css/base.css">
+    <link rel="stylesheet" href="css/atom.css">
+    <link rel="stylesheet" href="build/css/custom.css">
+    <link rel="stylesheet" href="css/gallery/introjs.css">
+    <link rel="stylesheet" href="css/gallery/flexslider.css">
+    <script data-main="js/app.js" src="js/require.js"></script>
+    <!--[if lt IE 9]>
+    <script>require(['lib/html5shiv.min']);</script>
+    <script>require(['lib/respond.min']);</script>
+    <![endif]-->
+<body>
+<div class="navbar top-navbar navbar-fixed-top h64 navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">
+                <img src="images/logo-wallwa-normal.jpg" alt="墙蛙 - 唤醒你的墙">
+            </a>
+            <a class="navbar-brand" href="http://blog.wallwa.com/article/34/wallwa15.html">
+                <img src="images/logo-disney-normal.png" alt="墙蛙 x 迪斯尼">
+            </a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="menu">
+                    <a class="def-menu" href="/custom" target="_blank">
+                        定制
+                    </a>
+                </li>
+                <li class="dropdown menu h75">
+                    <a target="_blank" class="def-menu discovery readed" href="/public/list">
+                        <i class="red-point"></i>
+                        发现
+                    </a>
+                    <ul class="ww-dropdown-menu" role="menu">
+                        <li>
+                            <a target="_blank" href="/public/list">发现产品</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="/shopGuide">开店引导</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://wallwa.tmall.com/?spm=a220o.1000855.w9378884-9436674517.14.HUmbeG">墙蛙旗舰店</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://wallwa.jiyoujia.com/shop/view_shop.htm?spm=a1z10.1-c.w9263053-9619899774.11.rtTpKG">墙蛙淘宝店</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://blog.wallwa.com">墙蛙博客</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu last">
+                    <a class="btn btn-ghost btn-xs" href="/login?next=home">创建新产品</a>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <div class="nav-search-open-btn">
+                    <i class="wa wa-search"></i>
+                </div>
+                <div class="nav-search">
+                    <i class="wa wa-search"></i>
+                    <div class="search-hidden">
+                        <input class="nav-search-content" type="text" placeholder="搜索wallwa网">
+                        <i class="wa wa-close"></i>
+                        <div class="search-tips">
+                            点击回车键进行搜索
+                        </div>
+                        <div class="nav-search-result">
+                            <ul>
+                                <li>动物</li>
+                                <li>风景</li>
+                                <li>花草</li>
+                                <li>人物</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <li>
+                    <a href="/login?next=custom" class="link">登录</a>
+                </li>
+                <li class="dropdown reg-item">
+                    <a href="/register">
+                        <i class="wa wa-discount nav-discount-icon"></i>
+                        <span>注册有礼</span>
+                    </a>
+                    <div class="ww-dropdown-menu">
+                        体验优惠无需理由！<br>
+                        <span class="color-d1">7折</span>包邮 + <span class="color-d1">20元</span>体验券 <br>
+                        分享个人优惠码还可返现<span class="color-d1">10元</span>
+                    </div>
+                </li>
+
+                <li class="cart-item">
+                    <a href="/cart" target="_blank">
+                        <span class="add-cart-count">0</span>
+                        <i class="wa wa-shopping-cart-fill cart-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<input class="hide" value="false" id="login-status" \="">
+<div class="search-zzc"></div>
+<!----问题联系浮动微信二维码----->
+<div class="contact-wechat">
+    <div class="contact-box">
+        <a class="contact-close" href="javascript:void(0)">
+            <img src="images/contact-kf.png" \="">
+        </a>
+
+        <div class="wechat-erwm">
+            <img src="images/contact-weixin.png" \="">
+        </div>
+    </div>
+</div>
+<div class="banner" style="margin-top: 64px">
+    <div class="cell-wrap">
+        <h1>立即上传作品，开始体验定制吧</h1>
+        <h2>手机照片、电脑图片，均可上传做成自己的产品</h2>
+        <a href="javascript:void(0);" class="btn btn-primary btn-lg" id="hd-upload-img-btn">上传作品</a>
+    </div>
+</div>
+
+<div id="custom-header">
+    <div class="container">
+        <div class="custom-nav-slider">
+            <ul class="nav slides custom-nav" role="tablist">
+                <li role="presentation" data-type="framePic">
+                    <a href="#framePic" role="tab">
+                        <span class="wa wa-youkuanghua"></span>
+                        <p>有框画</p>
+                    </a>
+                </li>
+                <li role="presentation" data-type="rimlessPic">
+                    <a href="#rimlessPic" role="tab">
+                        <span class="wa wa-buyihua"></span>
+                        <p>布艺画</p>
+                    </a>
+                </li>
+                <li role="presentation" data-type="photoWall">
+                    <a href="#photoWall" role="tab">
+                        <span class="ct-i pw"></span>
+                        <p>照片墙</p>
+                    </a>
+                </li>
+                <li role="presentation" data-type="scrollPic">
+                    <a href="#scrollPic" role="tab">
+                        <span class="wa wa-juanzhouhua"></span>
+                        <p>卷轴画</p>
+                    </a>
+                </li>
+                <!--<li role="presentation" data-type="paintPic">-->
+                <!--<a href="#paintPic" role="tab">-->
+                <!--<span class="wa wa-huaxin"></span>-->
+                <!--<p>画芯</p>-->
+                <!--</a>-->
+                <!--</li>-->
+                <li role="presentation" data-type="cupPic">
+                    <a href="#cupPic" role="tab">
+                        <span class="wa wa-lvxingbei"></span>
+                        <p>旅行杯</p>
+                    </a>
+                </li>
+                <li role="presentation" data-type="bolsterPic">
+                    <a href="#bolsterPic" role="tab">
+                        <span class="wa wa-baozhen"></span>
+                        <p>抱枕</p>
+                    </a>
+                </li>
+                <li role="presentation" data-type="shirtPic">
+                    <a href="#shirtPic" role="tab">
+                        <span class="wa wa-T-Shirt"></span>
+                        <p>T恤</p>
+                    </a>
+                </li>
+                <li role="presentation" data-type="bagPic">
+                    <a href="#bagPic" role="tab">
+                        <span class="wa wa-fanbudai"></span>
+                        <p>帆布包</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ww-wrap custom-wrap">
+    <div id="custom-stage" class="cont-wrap container">
+        <!--work&&scene-->
+        <div id="ws-area">
+            <ul class="list-unstyled tab-nav">
+                <li data-type="scene">
+                    <a href="#scene-area" id="scene-btn">
+                        <i class="glyphicon glyphicon-menu-right"></i>
+                        实景展示
+                    </a>
+                </li>
+                <li class="line"></li>
+                <li data-type="work">
+                    <a href="#work-area">我的定制
+                        <i class="glyphicon glyphicon-menu-right"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--<div class="tab-content-wrap">
+                <div class="load-wrap">
+                    <div class="knight-rider-loader animate">
+                        <div class="knight-rider-bar"></div>
+                        <div class="knight-rider-bar"></div>
+                        <div class="knight-rider-bar"></div>
+                    </div>
+                </div>
+                <div class="page-wrap">
+                    <a class="item prev" href="#" data-type="prev">上页</a>
+                    <a class="item mid-item" href="#" data-type="num">
+                        <div>
+                            第 <span>1</span> 页
+                            <i class="glyphicon glyphicon-menu-down"></i>
+                            <i class="glyphicon glyphicon-menu-up"></i>
+                        </div>
+
+                        <div class="page-list">
+                            <div class="page-cont">
+                                <ul class="list-unstyled"></ul>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="item next" href="#" data-type="next">下页</a>
+                </div>
+                <div class="pane-wrap tab-content">
+                    <div id="work-area" class="tab-pane fade tab-cont-item" data-type="work"></div>
+                    <div id="scene-area" class="tab-pane fade tab-cont-item" data-type="scene"></div>
+                </div>
+            </div>-->
+        </div>
+
+        <!--customArea-->
+        <div class="custom-cont">
+            <div class="load-wrap"><div class="ww-loading"></div></div>
+
+            <div class="pic-area">
+                <div class="pic-cont-wrap  tab-content">
+                    <div id="framePic" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="framePic-wrap pic-content" style="padding: 30px; width: 533px; height: 533px; margin-left: 214px;);"><div class="top-mat mat" style="background: none rgb(255, 255, 251);"><div class="view-port mat-bg" style="top: 72px; left: 72px; width: 331px; height: 331px;"><div class="middle-mat mat"><div class="bottom-mat mat"><div class="hole-wrap mat"><div class="img-content-wrap"><div class="shade"></div><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div></div></div></div></div>
+                            <div class="multiPic-wrap pic-content" style="display: none;"><div class="top-mat mat"></div></div>
+                        </div>
+                    </div>
+                    <div id="rimlessPic" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="rimlessPic-wrap fire"><div class="cube-img-wrap" style="height: 485px;"><div class="cube-img left" style="width: 48.4545454545455px;"><div class="hole-wrap"><div class="img-content-wrap"><img src="" class="sub-target" style="display: none;"><div class="overlay"></div></div></div></div><div class="cube-img front" style="width: 485px;"><div class="hole-wrap mat"><div class="img-content-wrap"><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div></div></div>
+                            <div class="swf-wrap hide"><div id="swf-cont"></div></div>
+                            <div class="framePic-wrap rimlessFramePic-wrap pic-content" style="display: none;"><div class="top-mat mat"><div class="view-port"><div class="hole-wrap mat"><div class="img-content-wrap"><div class="img-content"><img src="" class="img-target"></div></div></div></div></div></div>
+                        </div>
+                    </div>
+                    <div id="photoWall" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="photoWall-wrap pic-content" style="width: 533px; height: 173px;"><div class="box box0" style="top: 7px; left: 0px; padding: 13px; width: 159px; height: 159px; background-image: url(http://wallwa.com/ic/bom/line-box/8?Width=159&amp;Height=159&amp;Border=13);"><div class="top-mat mat" style="background: none rgb(255, 255, 251);"><div class="view-port mat-bg" style="top: 20px; left: 20px; width: 95px; height: 95px;"><div class="middle-mat mat"><div class="bottom-mat mat"><div class="hole-wrap mat"><div class="img-content-wrap"><div class="shade"></div><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div></div></div></div></div><div class="box box1" style="top: 7px; left: 187px; padding: 13px; width: 159px; height: 159px; background-image: url(http://wallwa.com/ic/bom/line-box/8?Width=159&amp;Height=159&amp;Border=13);"><div class="top-mat mat" style="background: none rgb(255, 255, 251);"><div class="view-port mat-bg" style="top: 20px; left: 20px; width: 95px; height: 95px;"><div class="middle-mat mat"><div class="bottom-mat mat"><div class="hole-wrap mat"><div class="img-content-wrap"><div class="shade"></div><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div></div></div></div></div><div class="box box2" style="top: 7px; left: 374px; padding: 13px; width: 159px; height: 159px; background-image: url(http://wallwa.com/ic/bom/line-box/8?Width=159&amp;Height=159&amp;Border=13);"><div class="top-mat mat" style="background: none rgb(255, 255, 251);"><div class="view-port mat-bg" style="top: 20px; left: 20px; width: 95px; height: 95px;"><div class="middle-mat mat"><div class="bottom-mat mat"><div class="hole-wrap mat"><div class="img-content-wrap"><div class="shade"></div><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div></div></div></div></div></div>
+                        </div>
+                    </div>
+                    <div id="scrollPic" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="scrollPic-wrap pic-content fire" style="width: 273px; height: 533px; margin-left: 344px;"><img src="http://wallwa.com/ic/bom/image/e90b823030936ab57f868494ea7a36a6-439x858.png" class="bg-img"><div class="scrollPic-cont" style="width: 273px; height: 382px; top: 96.642px; left: 0px;"><div class="hole-wrap mat" style="width: 273px; height: 382px;"><div class="img-content-wrap"><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div></div>
+                        </div>
+                    </div>
+                    <div id="cupPic" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="side-control"><a href="javascript:void(0)" class="default-side active">正面</a> <a href="javascript:void(0)" class="other-side">侧面</a></div><div class="cupPic-wrap pic-content fire" style="width: 533px; height: 533px; margin-left: 214px;"><div class="cupPic-cont" style="width: 158px; height: 357px; top: 133px; left: 187px;"><img src="http://wallwa.com/ic/bom/image/ac6cfeeb38948d946fa27120516bff27-503x1139.jpeg" class="bg-img"><div class="hole-wrap mat" style="width: 561px; height: 410px; top: -26px; left: -188px;"><div class="img-content-wrap"><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div><img src="http://wallwa.com/ic/bom/image/60cd3f332a872dac0be4c8c59553494e-1700x1700.png" class="hg-img"></div>
+                        </div>
+                    </div>
+                    <div id="bolsterPic" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="bolsterPic-wrap pic-content fire" style="width: 533px; height: 533px; margin-left: 214px;"><div class="bolsterPic-cont" style="width: 301px; height: 301px; top: 106px; left: 116px;"><img src="http://wallwa.com/ic/bom/image/d12d3a87f07e3cbb83826c7e18091898-1131x1129.png" class="bg-img"><div class="hole-wrap mat" style="width: 301px; height: 301px;"><div class="img-content-wrap"><div class="img-content" style=""><img src="" class="img-target" style="display: none;"></div></div></div></div><img src="http://wallwa.com/ic/bom/image/ca740152d5f6d356e3351b308943b25c-2000x2000.png" class="hg-img"><img src="http://wallwa.com/ic/bom/image/fe336d771823e372c1c2686125bc2026-2000x2000.png" class="outline-img"></div>
+                        </div>
+                    </div>
+                    <div id="shirtPic" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="shirtPic-wrap pic-content fire" style="width: 533px; height: 533px; margin-left: 214px;">
+                                <div class="shirtPic-cont" style="width: 171px; height: 195px; top: 213px; left: 184px;">
+                                    <img src="http://wallwa.com/ic/bom/image/ca294c60be0843dba3597f5b4b32bcbb-640x731.jpeg" class="bg-img">
+                                    <div class="hole-wrap mat" style="width: 171px; height: 195px;">
+                                        <div class="img-content-wrap">
+                                            <div class="img-content" style="">
+                                                <img src="" class="img-target" style="display: none;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="http://wallwa.com/ic/bom/image/413901ad96da4e072c0767f508591d7b-2000x2000.png" class="hg-img">
+                                <img src="http://wallwa.com/ic/bom/image/c19f9dc7f83ef24d7406201e326687ce-2000x2000.png" class="outline-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bagPic" class="pic-wrap tab-pane" role="tabpanel">
+                        <div class="pic-cell">
+                            <div class="bagPic-wrap pic-content fire" style="width: 533px; height: 533px; margin-left: 214px;">
+                                <div class="bagPic-cont" style="width: 215px; height: 165px; top: 269px; left: 161px;">
+                                    <img src="http://wallwa.com/ic/bom/image/aa9c90e22a715569a29e6b38704ef746-807x619.jpeg" class="bg-img">
+                                    <div class="hole-wrap mat" style="width: 215px; height: 165px;">
+                                        <div class="img-content-wrap">
+                                            <div class="img-content" style="">
+                                                <img src="" class="img-target" style="display: none;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="http://wallwa.com/ic/bom/image/ef51d76871f5c553d47fbd495363a1e5-2000x2000.png" class="hg-img">
+                                <img src="http://wallwa.com/ic/bom/image/28a667e04fef9a3c51b7728ac74c6ef8-2000x2000.png" class="outline-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--big pw sub -->
+                <!--<div class="photoWall-big-wrap">
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <button class="btn btn-primary batch-btn">
+                        批量处理 <i class="glyphicon glyphicon-info-sign" data-original-title="" title=""></i>
+                    </button>
+
+                    <div class="carousel box-carousel slide load-container loading">
+                        <div class="load-wrap"><div class="ww-loading"></div></div>
+                        <div class="carousel-inner"></div>
+                        <a class="left carousel-control" href="#" data-target=".box-carousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#" data-target=".box-carousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>-->
+               <!-- <div class="custom-tools-area">
+                    <div class="image-actions">
+                        <a title="垂直居中" href="javascript:void(0)" class="primary-link v-align-middle disable"><i class="wa wa-vertical-center"></i><span>垂直居中</span></a>
+                        <a title="水平居中" href="javascript:void(0)" class="primary-link h-align-center disable"><i class="wa wa-horizontal-center"></i><span>水平居中</span></a>
+                        <a title="全显" href="javascript:void(0)" class="primary-link imagine-fill disable"><i class="wa wa-imagine-fill"></i><span>完整展示</span></a>
+                        <a title="铺满" href="javascript:void(0)" class="primary-link imagine-full disable"><i class="wa wa-imagine-full"></i><span>铺满画面</span></a>
+                    </div>
+                </div>-->
+                <!--工具条-->
+               <!-- <div class="custom-toolbar disable">
+                    <div class="ope-area zoom-area">
+                        <a href="#" class="ope-btn zoom-btn zoomin" data-type="1">
+                            <i class="ct-i minus-i"></i>
+                        </a>
+                        <div class="zoom-bar">
+                            <div class="zoom-line">
+                                <span class="zoom-active-line" style="width: 0%;"></span>
+                            </div>
+                            <span class="zoom-ball" style="touch-action: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0%;">
+                                <i class="ww-icon ball"></i>
+                            </span>
+                        </div>
+                        <a href="#" class="ope-btn zoom-btn zoomout" data-type="2">
+                            <i class="ct-i plus-i"></i>
+                        </a>
+                        <span id="scale-count" class="scale-count">100%</span>
+                    </div>
+                    <div class="ope-area rotate-area">
+                        <a href="#" class="ope-btn rotate-btn rotete-left" data-type="4">
+                            <i class="ww-icon rotate-l"></i>
+                        </a>
+                        <a href="#" class="ope-btn rotate-btn rotete-right ml20" data-type="3">
+                            <i class="ww-icon rotate-r"></i>
+                        </a>
+                    </div>
+                </div>-->
+
+                <div class="dialog-prompt" style="display: none;"><div id="prompt" class="ww-prompt custom-prompt"><div class="alert"></div></div></div>
+            </div>
+
+            <!--scene area-->
+         <!--   <div class="scene-area loading">
+                <button type="button" class="scene-close" aria-label="Close">
+                    <span class="ww-icon ww-close">关闭</span>
+                </button>
+
+                <div class="scene-load-wrap text-center">
+                    <img class="pre-loading" src="images/loading-32.gif" alt="wallwa loading">
+                    <span>加载中...</span>
+                </div>
+
+                <img class="scene-bg" src="" alt="场景图">
+
+                <div class="scene-pic-wrap">
+                    <div class="pic-item"></div>
+                </div>
+            </div>-->
+        </div>
+
+        <!--customAside-->
+        <div class="custom-aside">
+            <div class="step-btn">
+                <i class="ww-icon help-i"></i>
+            </div>
+            <div class="side summary-wrap">
+                <ul class="list-unstyled info" id="list-unstyled">
+
+                </ul>
+
+                <div class="btn-group-wrap">
+                    <div class="step step1 active" data-step="1">
+                        <button class="btn btn-lg btn-block btn-success" data-type="1">
+                            <i class="wa wa-shopping-cart-fill"></i>
+                            <span>加入购物车</span>
+                        </button>
+                        <button class="btn btn-lg btn-block btn-default" data-type="2">
+                            <span>售卖这件产品</span>
+                        </button>
+                    </div>
+
+                    <div class="step step2" data-step="2">
+                        <a href="/cart" class="btn btn-lg btn-block btn-success " target="_blank" data-type="link">
+                            <img src="images/circle-money.png" alt="">
+                            <span>去结算</span>
+                        </a>
+                        <button class="btn btn-lg btn-block btn-default" data-type="4">
+                            <span>再定制一幅</span>
+                        </button>
+                    </div>
+
+                    <div class="step step3" data-step="3">
+                        <button class="btn btn-lg btn-block btn-success" data-type="3">
+                            <i class="wa wa-shopping-cart-fill"></i>
+                            <span>加入购物车</span>
+                        </button>
+                        <button class="btn btn-lg btn-block btn-default" data-type="4">
+                            <span>再定制一幅</span>
+                        </button>
+                    </div>
+
+                    <div class="step step4" data-step="4">
+                        <button class="btn btn-lg btn-block btn-success" data-type="5">
+                            <span>保存修改</span>
+                        </button>
+                        <button class="btn btn-lg btn-block btn-default" data-type="6">
+                            <span>放弃修改</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <a href="#" class="item coupon-btn">注册有礼</a>
+                    <div class="item share-wrap">
+                            <span class="share-tit">
+                                <i class="bd"></i> 分享大作 <i class="wa wa-share-fill"></i>
+                            </span>
+                        <div class="share-list">
+                                <span class="share-social" data-type="weibo">
+                                    <i class="ww-icon social-color weibo-light-color"></i>
+                                </span>
+                                <span class="share-social" data-type="qq">
+                                    <i class="ww-icon social-color qq-light-color"></i>
+                                </span>
+                                <span class="share-social" data-type="weixin">
+                                    <i class="ww-icon social-color weixin-light-color"></i>
+                                </span>
+                                <span class="share-social" data-type="douban">
+                                    <i class="ww-icon social-color douban-light-color"></i>
+                                </span>
+                        </div>
+                    </div>
+                    <div class="share-erweima invisible">
+                        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <p>扫一扫进行分享</p>
+                        <div class="code-wrap">
+                            <img src="images/loading-32.gif" alt="墙蛙微信分享二维码" class="code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side pack-wrap clearfix">
+                <div class="left">
+                    <ul class="nav bom-list-nav">
+                        <li id="img-material-nav" class="active">
+                            <a href="#image" class="title">图片</a>
+                        </li>
+                        <li class="bom-item">
+                            <a href="#size" class="title">尺寸</a>
+                        </li>
+
+                        <li class="bom-item">
+                            <a href="#line" class="title">画框</a>
+                        </li>
+
+                        <li class="bom-item">
+                            <a href="#mat" class="title">卡纸</a>
+                        </li>
+
+                        <li class="bom-item">
+                            <a href="#paper" class="title">画纸</a>
+                        </li>
+
+                        <li class="bom-item">
+                            <a href="#glass" class="title last">玻璃</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div id="material-wrap" class="right tab-content"><div id="image" class="tab-pane fade active in">
+                    <div class="r-content-wrap material-cont-wrap">
+                        <div class="list-wrap">
+                            <ul class="list-unstyled scroll-list scroll-list-img" data-type="image">
+                                <li class="add-item" id="upload-btn" style="z-index: 1;">
+                                    <span class="add-img ct-i cross-i"></span>
+                                </li>
+
+                                <div id="html5_1ahsotsk8ss9jt8ifo1t781g083_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 65px; height: 65px; overflow: hidden; z-index: 0;"><input id="html5_1ahsotsk8ss9jt8ifo1t781g083" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept="image/jpeg,image/png"></div></ul>
+                        </div>
+                        <div class="pagination-wrap">
+                            <div class="num pull-left">1/0</div>
+                            <div class="center">
+                                <a href="#" class="ctr-label prev disable">
+                                    <span class="arrow"></span>
+                                </a>
+                                <input type="text" class="form-control" value="1">
+                                <a href="#" class="ctr-label next ">
+                                    <span class="arrow"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade bom-detail-modal"><!--物料详情-->
+    <div class="carousel slide bom-detail-carousel">
+        <div class="carousel-inner detail-inner"></div>
+        <a class="left carousel-control hide" href="#" data-target=".bom-detail-carousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span></a>
+        <a class="right carousel-control hide" href="#" data-target=".bom-detail-carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span></a>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="ft-wrapper">
+        <div class="footer-hd mb20">
+            <div class="ft-right">
+                <ul class="list-inline">
+                    <li><a href="/copyright">版权声明</a></li>
+                    <li><a href="/useAgreement">用户协议</a></li>
+                    <li><a href="/issue">常见问题</a></li>
+                    <li><a href="/about">关于墙蛙</a></li>
+                    <li><a href="/join">加入墙蛙</a></li>
+                    <li><a href="/contact">联系我们</a></li>
+
+                </ul>
+            </div>
+            <div class="social-follow">
+                <span class="item title">关注我们</span>
+                <a href="http://weibo.com/wallwa" class="item social-item" target="_blank">
+                    <i class="ww-icon social-i weibo-b"></i>
+                </a>
+                <a href="javascript:void(0)" class="item social-item weixin-item">
+                    <i class="ww-icon social-i weixin-b"></i>
+                    <img src="images/weixinma.png" alt="微信二维码" class="erweima">
+                </a>
+                <span class="item ceo-item">
+                    意见反馈 <a href="mailto:ceo@wallwa.com?subject=反馈有奖&amp;body=您在使用中发现墙蛙网的不足之处，不好的体验，技术的bug，请您和我联系，优质的反馈，丰厚的奖品。请在邮件中注明您的墙蛙网账号。"> ceo@wallwa.com</a>
+                </span>
+            </div>
+        </div>
+        <p class="copyrights">© 2015 wallwa.com 版权所有 浙ICP备 1102094</p>
+    </div>
+</div>
+<a href="#top" id="back-to-top" class="active">
+    <i class="glyphicon glyphicon-chevron-up"></i>
+    <div class="inner1"><div class="inner2"></div></div>
+</a>
+<div class="modal gift-modal fade">
+    <div class="table-modal">
+        <div class="tbody">
+            <div class="cont normal">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="ww-icon ww-close">关闭</span>
+                </button>
+                <ul class="image-list list-unstyled">
+                    <li class="active" style="z-index: 4;"><img src="images/1.jpg" alt="墙蛙 注册有礼"></li>
+                    <li style="z-index: 3;"><img src="images/2.jpg" alt="墙蛙 注册有礼"></li>
+                    <li style="z-index: 2;"><img src="images/3.jpg" alt="墙蛙 注册有礼"></li>
+                    <li style="z-index: 1;"><img src="images/4.jpg" alt="墙蛙 注册有礼"></li>
+                </ul>
+                <div class="coupon-cont">
+                    <p class="tit color-p1">打折需要理由吗？不需要吗？需要吗？</p>
+                    <div class="cont">
+                        诶，就是想请你体验一下墙蛙定制嘛，干嘛非要理由呢？<br>
+                        即日起墙蛙网<strong> 7折包邮</strong>体验，注册再送 <strong>20元体验券</strong><br>
+                        <strong>分享优惠码</strong>还有10元返现！
+                    </div>
+                    <div class="btn-wrap hide ">
+                        <a class="btn btn-ghost" href="/custom">去定制</a>
+                        <a class="btn btn-primary reg-btn" href="/register">去注册</a>
+                        <a class="btn btn-primary disabled login-btn" href="javascript:void(0)">已登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>  require(['app/orderGoods']);</script>
+</body></html>
